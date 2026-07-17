@@ -10,8 +10,8 @@
 
 Every element of this portfolio is designed to lead **one specific person** to believe **one claim** and take **one action**.
 
-* **Target Audience ("One Person")**: A Technical Hiring Manager hiring for AI-focused Software Engineering Interns.
-* **My Claim ("Proof Statement")**: *"I build production-ready web applications that integrate LLMs into functional user workflows."*
+* **Target Audience ("One Person")**: The Technical Hiring Manager hiring for AI-focused Software Engineering Interns at FlyRank.
+* **My Claim ("Proof Statement")**: *"I build production-ready web applications that integrate LLMs into functional workflows, proven by my high-performance Farmer Trade System marketplace."*
 * **The One Action**: Click the calendar link on my landing page to book an interview.
 * **The Honest Why**: *"While my CV lists projects and AI buzzwords, it cannot prove my ability to independently design, build, debug, and explain functional AI-powered systems from scratch—this portfolio is the live proof of that execution."*
 
@@ -63,9 +63,9 @@ You are an expert full-stack developer and a strict software engineering tutor. 
 
 # Project Context & Claim
 I am building a high-performance portfolio. 
-- Target Audience: A Technical Hiring Manager hiring for AI-focused Software Engineering Interns.
-- Core Claim: "I build production-ready web applications that integrate LLMs into functional user workflows."
-- Primary Action: Get the visitor to book an interview slot.
+- Target Audience: The Technical Hiring Manager hiring for AI-focused Software Engineering Interns at FlyRank.
+- Core Claim: "I build production-ready web applications that integrate LLMs into functional workflows, proven by my high-performance Farmer Trade System marketplace."
+- Primary Action: Click the calendar link on my landing page to book an interview.
 
 # Guidelines
 - Act as a tutor: Do not just write all the code for me. Ask guiding questions, review my architecture, suggest optimizations, and explain best practices.
