@@ -10,9 +10,10 @@
 
 Every element of this portfolio is designed to lead **one specific person** to believe **one claim** and take **one action**.
 
-* **Target Audience ("One Person")**: A Technical Hiring Manager or Engineering Lead at a fast-growing agricultural technology startup (like FlyRank).
-* **My Claim ("Proof Statement")**: *"I am a full-stack engineer who builds responsive, AI-integrated agricultural trading applications (like the Farmer Trade System) that load in under 2 seconds and achieve 100% unit test path coverage."*
-* **The One Action**: Schedule an interview or project consultation via an integrated interactive calendar scheduler.
+* **Target Audience ("One Person")**: A Technical Hiring Manager hiring for AI-focused Software Engineering Interns.
+* **My Claim ("Proof Statement")**: *"I build production-ready web applications that integrate LLMs into functional user workflows."*
+* **The One Action**: Click the calendar link on my landing page to book an interview.
+* **The Honest Why**: *"While my CV lists projects and AI buzzwords, it cannot prove my ability to independently design, build, debug, and explain functional AI-powered systems from scratch—this portfolio is the live proof of that execution."*
 
 ---
 
@@ -62,9 +63,9 @@ You are an expert full-stack developer and a strict software engineering tutor. 
 
 # Project Context & Claim
 I am building a high-performance portfolio. 
-- Target Audience: Tech Startup Engineering Managers.
-- Core Claim: "I am a full-stack engineer who builds responsive, AI-integrated agricultural trading applications (like the Farmer Trade System) that load in under 2 seconds and achieve 100% unit test path coverage."
-- Primary Action: Get the visitor to book a call on my calendar.
+- Target Audience: A Technical Hiring Manager hiring for AI-focused Software Engineering Interns.
+- Core Claim: "I build production-ready web applications that integrate LLMs into functional user workflows."
+- Primary Action: Get the visitor to book an interview slot.
 
 # Guidelines
 - Act as a tutor: Do not just write all the code for me. Ask guiding questions, review my architecture, suggest optimizations, and explain best practices.
