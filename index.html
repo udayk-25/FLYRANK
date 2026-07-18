@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uday | High-Performance Full-Stack & Search Engineer</title>
+  <!-- Brand Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Brand Design Tokens */
+    :root {
+      --color-primary: #0F172A; /* Slate 900 */
+      --color-accent: #0284C7;  /* Sky 600 */
+      --color-bg-dark: #090D16; /* Near Black */
+      --color-card-bg: #1E293B; /* Slate 800 */
+      --color-text-light: #FAFAFA; /* Stone 50 */
+      --color-text-muted: #94A3B8; /* Slate 400 */
+      --color-border: #334155; /* Slate 700 */
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-primary);
+      background-image: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 45%);
+      color: var(--color-text-light);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    /* Monogram Logo */
+    .logo-container {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      padding: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      display: inline-flex;
+      transition: transform 0.3s ease;
+    }
+    .logo-container:hover {
+      transform: scale(1.05);
+    }
+
+    /* Main Claim Header */
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--color-text-light);
+    }
+    h1 span {
+      background: linear-gradient(to right, var(--color-text-light), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Sub-status */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(2, 132, 199, 0.1);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+      color: #38BDF8; /* Sky 300 */
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--color-accent);
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    /* Case Studies Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      width: 100%;
+    }
+    @media (min-width: 600px) {
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0.85;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      opacity: 1;
+    }
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-light);
+    }
+    .card-desc {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.4;
+    }
+
+    /* CTA Button Section */
+    .cta-container {
+      width: 100%;
+    }
+    .cta-button {
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+      background: var(--color-accent);
+      color: var(--color-text-light);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 0.875rem 1.75rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+      cursor: not-allowed; /* Disabled state during setup */
+    }
+    .cta-button:hover {
+      background: #0274ae;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.6);
+    }
+    .cta-note {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      from { opacity: 0.4; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Monogram Logo -->
+    <div class="logo-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#FAFAFA" stroke-width="6"/>
+        <path d="M35,30 L35,55 C35,63.28 41.72,70 50,70 C58.28,70 65,63.28 65,55 L65,30" 
+              fill="none" stroke="#FAFAFA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="52" r="5" fill="#0284C7" />
+      </svg>
+    </div>
+
+    <!-- Claim Statement -->
+    <h1>I build responsive, <span>transactionally reliable</span> web applications that load in under 2 seconds and achieve 100% test path coverage.</h1>
+
+    <!-- Live Status -->
+    <div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Build Pipeline Connected
+      </div>
+    </div>
+
+    <!-- Case Studies Preview -->
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-title">01. Farmer Trade System</div>
+        <div class="card-desc">Digital agriculture marketplace built with Node.js and SQLite. Bypasses heavy frameworks to ensure sub-2-second loads on rural connections with verified 100% test path coverage.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">02. Search Intelligence ML</div>
+        <div class="card-desc">Prioritizing content refresh opportunities using a Random Forest model on 30,000 search rows, lifting Precision@50 from 24% (baseline rules) to 74%.</div>
+      </div>
+    </div>
+
+    <!-- Contact & Call to Action -->
+    <div class="cta-container">
+      <a href="#" class="cta-button" onclick="return false;">Scheduler Opening Soon</a>
+      <div class="cta-note">Introductory call calendar setup is in progress. Full portfolio launching next week.</div>
+    </div>
+  </div>
+
+</body>
+</html>
