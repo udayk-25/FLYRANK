@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-07-20T16:22:57.221931",
+  "status": "SUCCESS",
+  "total_records_ingested": 26254,
+  "precision_at_50": 0.58,
+  "base_rate": 0.5907,
+  "top_10_ids": [
+    "content_cf56e2e2e282",
+    "content_7368877ea310",
+    "content_1bfaa38ff26c",
+    "content_0a91db491d14",
+    "content_5feee3994adb",
+    "content_c2d929d83eaa",
+    "content_b16bd7307b39",
+    "content_fe16a55cd13d",
+    "content_ecb6215e79fd",
+    "content_5fe46e04994d"
+  ],
+  "brief_file": "work/outputs/briefs\\refresh_brief_top50.md"
+}
