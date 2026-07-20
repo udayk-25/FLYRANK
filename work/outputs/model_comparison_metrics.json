@@ -1,0 +1,32 @@
+[
+  {
+    "Model / Baseline": "Base Rate (Random Chance)",
+    "Precision@20": 0.5109524582184002,
+    "Precision@50": 0.5109524582184002,
+    "Lift @ 50": 1.0
+  },
+  {
+    "Model / Baseline": "Heuristic Rule Baseline (W04)",
+    "Precision@20": 0.35,
+    "Precision@50": 0.44,
+    "Lift @ 50": 0.86
+  },
+  {
+    "Model / Baseline": "Logistic Regression",
+    "Precision@20": 0.5,
+    "Precision@50": 0.64,
+    "Lift @ 50": 1.25
+  },
+  {
+    "Model / Baseline": "Decision Tree (depth=4)",
+    "Precision@20": 0.55,
+    "Precision@50": 0.6,
+    "Lift @ 50": 1.17
+  },
+  {
+    "Model / Baseline": "Random Forest (depth=6)",
+    "Precision@20": 0.95,
+    "Precision@50": 0.86,
+    "Lift @ 50": 1.68
+  }
+]
