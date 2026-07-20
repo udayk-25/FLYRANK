@@ -1,0 +1,6 @@
+{
+  "base_rate": 0.5421,
+  "precision_at_50": 0.56,
+  "lift": 1.03,
+  "total_rows": 30000
+}
