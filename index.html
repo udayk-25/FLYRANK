@@ -29,6 +29,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: var(--color-primary);
       background-image: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 45%);
@@ -38,19 +42,55 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      padding: 0;
       overflow-x: hidden;
     }
 
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--color-text-light);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
     .container {
-      max-width: 720px;
+      max-width: 800px;
       width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2.5rem;
+      gap: 3.5rem;
+      padding: 3rem 2rem 5rem 2rem;
     }
 
     /* Monogram Logo */
@@ -67,7 +107,13 @@
       transform: scale(1.05);
     }
 
-    /* Main Claim Header */
+    /* Hero Header */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
     h1 {
       font-family: var(--font-heading);
       font-size: 2.25rem;
@@ -82,17 +128,16 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Sub-status */
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       background: rgba(2, 132, 199, 0.1);
       border: 1px solid rgba(2, 132, 199, 0.3);
-      color: #38BDF8; /* Sky 300 */
+      color: #38BDF8;
       padding: 0.5rem 1rem;
       border-radius: 9999px;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -106,6 +151,19 @@
       animation: pulse 1.5s infinite alternate;
     }
 
+    /* Section Headers */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      margin-bottom: 0.5rem;
+      text-align: left;
+      width: 100%;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.75rem;
+    }
+
     /* Case Studies Cards */
     .cards-grid {
       display: grid;
@@ -113,7 +171,7 @@
       gap: 1.5rem;
       width: 100%;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 650px) {
       .cards-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -123,38 +181,98 @@
       background: var(--color-card-bg);
       border: 1px solid var(--color-border);
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.75rem;
       text-align: left;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      opacity: 0.85;
     }
     .card:hover {
       transform: translateY(-4px);
       border-color: var(--color-accent);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      opacity: 1;
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15);
+    }
+    .card-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
     }
     .card-title {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       color: var(--color-text-light);
     }
     .card-desc {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: var(--color-text-muted);
-      line-height: 1.4;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+    .card-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
-    /* CTA Button Section */
+    /* About Section */
+    .about-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .bio-text {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+    .skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skill-badge {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-light);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+    }
+
+    /* Contact / CTA */
     .cta-container {
       width: 100%;
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
     .cta-button {
       display: inline-block;
       width: 100%;
-      max-width: 280px;
+      max-width: 300px;
       background: var(--color-accent);
       color: var(--color-text-light);
       font-family: var(--font-heading);
@@ -164,21 +282,45 @@
       padding: 0.875rem 1.75rem;
       border-radius: 8px;
       transition: all 0.2s ease;
-      border: 1px solid transparent;
       box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
-      cursor: not-allowed; /* Disabled state during setup */
+      cursor: pointer;
     }
     .cta-button:hover {
       background: #0274ae;
       box-shadow: 0 6px 20px rgba(2, 132, 199, 0.6);
     }
-    .cta-note {
-      font-size: 0.75rem;
+
+    /* Modal Styling */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(9, 13, 22, 0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-content {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .modal-close {
+      margin-top: 1.5rem;
+      background: transparent;
+      border: 1px solid var(--color-border);
       color: var(--color-text-muted);
-      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
     }
 
-    /* Animations */
     @keyframes pulse {
       from { opacity: 0.4; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1.1); }
@@ -187,46 +329,116 @@
 </head>
 <body>
 
-  <div class="container">
-    <!-- Monogram Logo -->
-    <div class="logo-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="#FAFAFA" stroke-width="6"/>
-        <path d="M35,30 L35,55 C35,63.28 41.72,70 50,70 C58.28,70 65,63.28 65,55 L65,30" 
-              fill="none" stroke="#FAFAFA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="50" cy="52" r="5" fill="#0284C7" />
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <svg width="28" height="28" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#FAFAFA" stroke-width="8"/>
+        <path d="M35,30 L35,55 C35,63.28 41.72,70 50,70 C58.28,70 65,63.28 65,55 L65,30" fill="none" stroke="#FAFAFA" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="50" cy="52" r="6" fill="#0284C7" />
       </svg>
-    </div>
+      Uday
+    </a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Book a Call</a></li>
+    </ul>
+  </nav>
 
-    <!-- Claim Statement -->
-    <h1>I build responsive, <span>transactionally reliable</span> web applications that load in under 2 seconds and achieve 100% test path coverage.</h1>
+  <div class="container">
+    <!-- Hero Header -->
+    <div class="hero">
+      <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#FAFAFA" stroke-width="6"/>
+          <path d="M35,30 L35,55 C35,63.28 41.72,70 50,70 C58.28,70 65,63.28 65,55 L65,30" 
+                fill="none" stroke="#FAFAFA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="52" r="5" fill="#0284C7" />
+        </svg>
+      </div>
 
-    <!-- Live Status -->
-    <div>
+      <h1>I build responsive, <span>transactionally reliable</span> web applications that load in under 2 seconds and achieve 100% test path coverage.</h1>
+
       <div class="status-badge">
         <span class="status-dot"></span>
-        Build Pipeline Connected
+        Available for Engineering Roles
       </div>
     </div>
 
-    <!-- Case Studies Preview -->
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-title">01. Farmer Trade System</div>
-        <div class="card-desc">Digital agriculture marketplace built with Node.js and SQLite. Bypasses heavy frameworks to ensure sub-2-second loads on rural connections with verified 100% test path coverage.</div>
+    <!-- Featured Case Studies -->
+    <div id="work" style="width: 100%;">
+      <h2 class="section-title">Featured Case Studies</h2>
+      <div class="cards-grid">
+        
+        <a href="farmer-trade.html" class="card">
+          <div>
+            <div class="card-tag">Software Engineering</div>
+            <div class="card-title">Farmer Trade System</div>
+            <div class="card-desc">Zero-failure agricultural marketplace. Built with Node.js and SQLite to ensure sub-2-second loads on spotty rural connections with verified 100% test path coverage.</div>
+          </div>
+          <div class="card-link">Read Case Study &rarr;</div>
+        </a>
+
+        <a href="search-intelligence.html" class="card">
+          <div>
+            <div class="card-tag">Machine Learning</div>
+            <div class="card-title">Search Intelligence ML</div>
+            <div class="card-desc">Prioritizing content refresh opportunities using a Random Forest model on 30,000 search rows, lifting Precision@50 from 24% to 74%.</div>
+          </div>
+          <div class="card-link">Read Case Study &rarr;</div>
+        </a>
+
       </div>
-      <div class="card">
-        <div class="card-title">02. Search Intelligence ML</div>
-        <div class="card-desc">Prioritizing content refresh opportunities using a Random Forest model on 30,000 search rows, lifting Precision@50 from 24% (baseline rules) to 74%.</div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" style="width: 100%;">
+      <h2 class="section-title">About & Engineering Proof</h2>
+      <div class="about-card">
+        <p class="bio-text">
+          I am a software engineer focused on building high-performance web applications and search intelligence pipelines. I believe that engineering credibility comes from verified numbers, clean code stubs, and deterministic performance—not corporate buzzwords.
+        </p>
+        <div class="skills-flex">
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Express.js</span>
+          <span class="skill-badge">SQLite</span>
+          <span class="skill-badge">Jest (100% Coverage)</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Pandas</span>
+          <span class="skill-badge">DuckDB</span>
+          <span class="skill-badge">Random Forest</span>
+          <span class="skill-badge">Vanilla CSS</span>
+        </div>
       </div>
     </div>
 
     <!-- Contact & Call to Action -->
-    <div class="cta-container">
-      <a href="#" class="cta-button" onclick="return false;">Scheduler Opening Soon</a>
-      <div class="cta-note">Introductory call calendar setup is in progress. Full portfolio launching next week.</div>
+    <div id="contact" class="cta-container">
+      <h2 style="font-family: var(--font-heading); font-size: 1.5rem;">Ready to discuss a project or role?</h2>
+      <p style="color: var(--color-text-muted); font-size: 0.95rem;">Select a time on the calendar to book a 15-minute introductory call.</p>
+      <button class="cta-button" onclick="openModal()">Book a 15-Min Call</button>
     </div>
   </div>
+
+  <!-- Booking Modal Mockup -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+      <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--color-text-light);">Schedule 15-Min Introductory Call</h3>
+      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Calendar scheduler integration initialized (Cal.com / Calendly mockup).</p>
+      <p style="font-size: 0.85rem; color: var(--color-accent);">Email: uday.engineering@example.com</p>
+      <button class="modal-close" onclick="closeModal()">Close Window</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
